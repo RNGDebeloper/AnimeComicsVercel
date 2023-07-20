@@ -49,7 +49,9 @@ export default async function page({params, searchParams}) {
         </style>
       </div>
       {data.imgs.map((img, i) => 
-        <Img className={styles.bigImg} color={data.color} height={'90vh'} key={i} img={img} />
+        <div className={styles.bigImgWrap} style={{maxWidth: '600px'}}>
+          <Img className={styles.bigImg} color={data.color} height={'720px'} key={i} img={img} />
+        </div>
       )}
       <Component page={searchParams.page} />
       <Stripify use={true} />
