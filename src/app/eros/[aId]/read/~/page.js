@@ -50,7 +50,7 @@ export default async function page({params, searchParams}) {
       </div>
       {data.imgs.map((img, i) => 
         <div className={styles.bigImgWrap} style={{maxWidth: '600px'}}>
-          <Img className={styles.bigImg} color={data.color} height={'720px'} key={i} img={img} />
+          <Img className={styles.bigImg} color={data.color} height={'720px'} id={`💦${i}`} img={img} key={i} />
         </div>
       )}
       <Component page={searchParams.page} />
